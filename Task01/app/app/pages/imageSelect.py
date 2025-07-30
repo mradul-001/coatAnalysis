@@ -32,7 +32,7 @@ class ImageSelect(tk.Frame):
             self.controller.frames[ScaleSelection].load_image(file_path)
             img = Image.open(file_path)
             preview_img = img.copy()
-            preview_img.thumbnail((600, 400))  # adjust size as needed
+            preview_img.thumbnail((1000, 800))
             self.tk_img = ImageTk.PhotoImage(preview_img)
 
             self.img_label.config(image=self.tk_img)

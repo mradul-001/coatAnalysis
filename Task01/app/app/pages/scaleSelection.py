@@ -45,25 +45,6 @@ class ScaleSelection(tk.Frame):
         self.status.pack()
         self.proceed_button = None
 
-    # def load_image(self, image_path):
-    #     self.clicks.clear()
-    #     self.status.config(text="")
-    #     self.image_path = image_path
-
-    #     img = Image.open(image_path)
-    #     self.tk_img = ImageTk.PhotoImage(img)
-    #     width, height = img.size
-
-    #     if hasattr(self, "canvas"):
-    #         self.canvas.config(width=width, height=height)
-    #         self.canvas.delete("all")
-    #     else:
-    #         self.canvas = tk.Canvas(self, width=width, height=height, bg="#ddd")
-    #         self.canvas.pack(pady=10)
-    #         self.canvas.bind("<Button-1>", self.record_click)
-
-    #     self.canvas.create_image(0, 0, image=self.tk_img, anchor="nw")
-
     def load_image(self, image_path):
         self.clicks.clear()
         self.status.config(text="")
@@ -71,7 +52,7 @@ class ScaleSelection(tk.Frame):
 
         img = Image.open(image_path)
         preview_img = img.copy()
-        preview_img.thumbnail((600, 400))  # adjust as needed
+        preview_img.thumbnail((1000, 800))
         self.tk_img = ImageTk.PhotoImage(preview_img)
         width, height = preview_img.size
 
